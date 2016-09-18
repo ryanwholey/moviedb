@@ -83,6 +83,18 @@
 	    });
 	});
 
+	describe('async block', function () {
+	    it('should wait for async', function (done) {
+	        var flag = false;
+	        setTimeout(function () {
+	            flag = true;
+	            expect(flag).toEqual(false);
+	            done();
+	        }, 300);
+	        expect(flag).toEqual(false);
+	    });
+	});
+
 /***/ },
 /* 3 */
 /***/ function(module, exports) {

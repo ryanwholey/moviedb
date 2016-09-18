@@ -6,3 +6,18 @@ describe('test block' , () => {
         expect(b.b).toEqual(2);
     });
 });
+
+describe('async block', () => {
+
+    it('should wait for async', (done) => {
+        let flag = false;
+
+        setTimeout(() => {
+            flag = true;
+            expect(flag).toEqual(true);
+            done();
+        },300);
+
+        expect(flag).toEqual(false);
+    });
+});
