@@ -1,22 +1,23 @@
-import main from './main'
+var main = require('./main');
 
-describe('test block' , () => {
-    it('should be true', () => {
+describe('test block' , function() {
+
+    it('should be true', function() {
         let b = {b:2, ...main};
-        expect(b.b).toEqual(2);
+        expect(b.a).toEqual(1);
     });
 });
 
-describe('async block', () => {
+describe('async block', function() {
 
-    it('should wait for async', (done) => {
+    it('should wait for async', function(done) {
         let flag = false;
 
         setTimeout(() => {
             flag = true;
             expect(flag).toEqual(true);
             done();
-        },300);
+        }, 300);
 
         expect(flag).toEqual(false);
     });

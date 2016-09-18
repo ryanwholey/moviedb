@@ -44,11 +44,34 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(1);
-	__webpack_require__(2);
-	__webpack_require__(3);
-	module.exports = __webpack_require__(4);
+	'use strict';
 
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var main = __webpack_require__(1);
+
+	describe('test block', function () {
+
+	    it('should be true', function () {
+	        var b = _extends({ b: 2 }, main);
+	        expect(b.a).toEqual(1);
+	    });
+	});
+
+	describe('async block', function () {
+
+	    it('should wait for async', function (done) {
+	        var flag = false;
+
+	        setTimeout(function () {
+	            flag = true;
+	            expect(flag).toEqual(true);
+	            done();
+	        }, 300);
+
+	        expect(flag).toEqual(false);
+	    });
+	});
 
 /***/ },
 /* 1 */
@@ -61,51 +84,6 @@
 	};
 
 	module.exports = obj;
-
-/***/ },
-/* 2 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-	var _main = __webpack_require__(1);
-
-	var _main2 = _interopRequireDefault(_main);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	describe('test block', function () {
-	    it('should be true', function () {
-	        var b = _extends({ b: 2 }, _main2.default);
-	        expect(b.b).toEqual(2);
-	    });
-	});
-
-	describe('async block', function () {
-	    it('should wait for async', function (done) {
-	        var flag = false;
-	        setTimeout(function () {
-	            flag = true;
-	            expect(flag).toEqual(false);
-	            done();
-	        }, 300);
-	        expect(flag).toEqual(false);
-	    });
-	});
-
-/***/ },
-/* 3 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-/***/ },
-/* 4 */
-/***/ function(module, exports) {
-
-	"use strict";
 
 /***/ }
 /******/ ]);
