@@ -1,13 +1,13 @@
 var path = require('path');
 
 var gulp = require('gulp');
-var webpackStream = require('webpack-stream');
 var jasmineBrowser = require('gulp-jasmine-browser');
 var phantom = require('gulp-jasmine-phantom');
+var webpackStream = require('webpack-stream');
 var webpack = require('webpack');
 
 var testFiles = ['src/**/*[sS]pec.js'];
-var config = require('./webpack.config.js')['test'];
+var config = require('./webpack.config.js').test;
 
 gulp.task('test', function() {
     config.watch = true;
@@ -28,6 +28,3 @@ gulp.task('phantom', ['webpack'], function () {
     return gulp.src('./.test/spec.js')
         .pipe(phantom({integration: true}))
 });
-
-
-

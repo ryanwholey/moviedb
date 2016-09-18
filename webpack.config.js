@@ -3,14 +3,14 @@ var webpack = require('webpack');
 
 module.exports = (function() {
 
-    const jsLoader = {
+    var jsLoader = {
         test: /\.js$/,
         loader:'babel',
         exclude:/node_modules/,
         query: {presets: ['es2015', 'stage-0']}
     };
 
-    const base = {
+    var base = {
         output: {filename: 'spec.js'},
         module: {
             devtool: 'inline-source-map',
@@ -38,4 +38,4 @@ module.exports = (function() {
         test: testConfig(),
     }
 
-}())
+}());
