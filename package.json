@@ -1,0 +1,26 @@
+{
+  "name": "bar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test",
+    "phantom": "gulp phantom"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "gulp": "^3.9.1",
+    "gulp-jasmine": "^2.4.1",
+    "gulp-jasmine-browser": "^1.6.1",
+    "gulp-jasmine-phantom": "^3.0.0",
+    "jasmine": "^2.5.2",
+    "phantomjs": "^1.9.20",
+    "require": "^2.4.20",
+    "webpack-stream": "^3.2.0"
+  }
+}
