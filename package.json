@@ -1,5 +1,5 @@
 {
-  "name": "bar",
+  "name": "moviedb",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "phantom": "gulp phantom"
   },
   "keywords": [],
-  "author": "",
+  "author": "ryan wholey",
   "license": "ISC",
   "devDependencies": {
     "babel-loader": "^6.2.5",
